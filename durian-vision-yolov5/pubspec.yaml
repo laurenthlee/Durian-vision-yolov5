@@ -1,0 +1,80 @@
+name: durian
+description: "Application to check for diseases of durian that affect planting and growth"
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  url_launcher: ^6.3.0
+  smooth_page_indicator: ^1.2.0+3
+  image_picker: ^0.8.5+3
+  flutter_launcher_icons: ^0.13.1
+  permission_handler: ^11.3.1
+  flutter_vision: ^1.1.4
+  google_fonts: ^6.2.1
+  http: ^1.2.2
+
+dependency_overrides:
+  image: ^4.0.15
+
+flutter_icons:
+  android:  true
+  ios : true
+  image_path: "assets/Durian-logo.png"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/image/durian_background.png
+    
+    - assets/image/img_card/AlgalLeafSpot1.jpg
+    - assets/image/img_card/AlgalLeafSpot2.jpg
+    - assets/image/img_card/AlgalLeafSpot3.jpg
+    - assets/image/img_card/AlgalLeafSpot4.jpg
+    - assets/image/img_card/AlgalLeafSpot5.jpg
+    - assets/image/img_card/Fruitrot1.jpg
+    - assets/image/img_card/Fruitrot2.jpg
+    - assets/image/img_card/Fruitrot3.jpg
+    - assets/image/img_card/Fruitrot4.jpg
+    - assets/image/img_card/Fruitrot5.jpg
+    - assets/image/img_card/LeafBlight1.jpg
+    - assets/image/img_card/LeafBlight2.jpg
+    - assets/image/img_card/LeafBlight3.jpg
+    - assets/image/img_card/LeafBlight4.jpg
+    - assets/image/img_card/LeafBlight5.jpg
+    - assets/image/img_card/Leaf-Spot1.jpg
+    - assets/image/img_card/Leaf-Spot2.jpg
+    - assets/image/img_card/Leaf-Spot3.jpg
+    - assets/image/img_card/Leaf-Spot4.jpg
+    - assets/image/img_card/Leaf-Spot5.jpg
+    - assets/image/img_card/Rootrot1.jpg
+    - assets/image/img_card/Rootrot2.png
+    - assets/image/img_card/Rootrot3.jpg
+    - assets/image/img_card/Rootrot4.jpg
+    - assets/image/img_card/Rootrot5.png
+
+
+    - assets/Durian-logo.png
+    - assets/model/Phytophthora.tflite
+    - assets/model/AlgalLeafSpot.tflite
+    - assets/model/LeafBlight.tflite
+    - assets/model/LeafSpot.tflite
+    - assets/model/Phytophthora.txt
+    - assets/model/AlgalLeafSpot.txt
+    - assets/model/LeafBlight.txt
+    - assets/model/LeafSpot.txt

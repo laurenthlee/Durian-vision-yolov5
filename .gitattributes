@@ -1,0 +1,4 @@
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.tflite filter=lfs diff=lfs merge=lfs -text
+Results[[:space:]]of[[:space:]]the[[:space:]]Data[[:space:]]Training[[:space:]]Process/** filter=lfs diff=lfs merge=lfs -text
