@@ -1,5 +1,3 @@
----
-
 # Durian Vision YOLOv5 (Flutter)
 
 A Flutter app for **real-time durian detection** using **YOLOv5**, with a smooth loading flow, structured data, and rich detail pages.
