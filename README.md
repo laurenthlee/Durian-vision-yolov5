@@ -526,3 +526,43 @@ python export.py --weights runs/train/exp/weights/best.pt --include tflite
 (Download as **YOLOv5 PyTorch** format for training.)
 
 ---
+
+# 1) What your numbers suggest (best-effort interpretation)
+
+I have 3 diseases and 3 training rounds (T1, T2, T3). The last columns look like counts at different **confidence thresholds** (0.7 / 0.8 / 0.9). For each disease, **T3** used the most data and shows the strongest counts at a reasonable threshold—so T3 is your best candidate.
+
+### AlgalLeafSpot (ALL = 1254)
+
+| Model | Count | Train | Val | @0.7 | @0.8 | @0.9 |
+| ----- | ----: | ----: | --: | ---: | ---: | ---: |
+| T1    |   405 |   131 |  61 |   15 |    0 |    — |
+| T2    |   852 |   131 |  77 |   48 |   10 |    — |
+| T3    |  1123 |   131 | 100 |   66 |   23 |    — |
+
+### LeafBlight (ALL = 1266)
+
+| Model | Count | Train | Val | @0.7 | @0.8 | @0.9 |
+| ----- | ----: | ----: | --: | ---: | ---: | ---: |
+| T1    |   415 |   122 |  35 |    5 |    0 |    — |
+| T2    |   808 |   122 |  97 |   44 |   10 |    — |
+| T3    |  1144 |   122 | 103 |   43 |    4 |    — |
+
+### Leaf-Spot (ALL = 1230)
+
+| Model | Count | Train | Val | @0.7 | @0.8 | @0.9 |
+| ----- | ----: | ----: | --: | ---: | ---: | ---: |
+| T1    |   407 |   123 |  56 |   25 |    0 |    — |
+| T2    |   808 |   123 |  77 |   31 |    0 |    — |
+| T3    |  1107 |   123 | 109 |   89 |   37 |    — |
+
+> Note: Some rows didn’t include an @0.9 value—left as “—”.
+
+You also listed a quick comparison (likely on a 110–296 image test slice):
+
+| Name          | Model | @0.8 | @0.9 | @0.7 |
+| ------------- | :---: | ---: | ---: | ---: |
+| AlgalLeafSpot |   T3  |   45 |    3 |   94 |
+| LeafBlight    |   T3  |   36 |    4 |   86 |
+| Leaf-Spot     |   T3  |   64 |   23 |   91 |
+
+This again shows: **lower threshold (0.7) ⇒ many more detections**; higher threshold (0.9) ⇒ very few. That’s the usual precision/recall trade-off.
