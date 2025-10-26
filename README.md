@@ -527,8 +527,6 @@ python export.py --weights runs/train/exp/weights/best.pt --include tflite
 
 ---
 
-# 1) What your numbers suggest (best-effort interpretation)
-
 I have 3 diseases and 3 training rounds (T1, T2, T3). The last columns look like counts at different **confidence thresholds** (0.7 / 0.8 / 0.9). For each disease, **T3** used the most data and shows the strongest counts at a reasonable threshold—so T3 is your best candidate.
 
 ### AlgalLeafSpot (ALL = 1254)
