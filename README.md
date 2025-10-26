@@ -4,7 +4,7 @@
 
 A Flutter app for **real-time durian detection** using **YOLOv5**, with a smooth loading flow, structured data, and rich detail pages.
 
-> Code lives on GitHub. Model weights are stored with **Git LFS**—after cloning, run `git lfs pull` to fetch the large files.
+Code lives on GitHub. Model weights are stored with **Git LFS**—after cloning, run `git lfs pull` to fetch the large files.
 
 ## Features
 
